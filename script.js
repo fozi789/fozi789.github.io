@@ -6,6 +6,15 @@ let fighting;
 let monsterHealth;
 let inventory = ["stick"];
 
+const townSquare = document.querySelector('#townSquare');
+const store = document.querySelector('#store');
+const cave = document.querySelector('#cave');
+const dragonBackgroundImage = document.querySelector('#dragonBackgroundImage');
+const dragon = document.querySelector('#dragon');
+const byHealthImage = document.querySelector('#byHealthImage');
+const byWeaponImage = document.querySelector('#byWeaponImage');
+const sellWeaponImage = document.querySelector('#sellWeaponImage');
+
 const button1 = document.querySelector('#button1');
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
@@ -108,23 +117,63 @@ function update(location) {
 
 function goTown() {
   update(locations[0]);
+  townSquare.style.display = "block";
+  store.style.display = "none";
+  cave.style.display = "none";
+  dragonBackgroundImage.style.display = "none";
+  dragon.style.display = "none";
+  byHealthImage.style.display = "none";
+  byWeaponImage.style.display = "none";
+  sellWeaponImage.style.display = "none";
 }
 
 function goStore() {
   update(locations[1]);
+  townSquare.style.display = "none";
+  store.style.display = "block";
+  cave.style.display = "none";
+  dragonBackgroundImage.style.display = "none";
+  dragon.style.display = "none";
+  byHealthImage.style.display = "none";
+  byWeaponImage.style.display = "none";
+  sellWeaponImage.style.display = "none";
 }
 
 function goCave() {
   update(locations[2]);
+  townSquare.style.display = "none";
+  store.style.display = "none";
+  cave.style.display = "block";
+  dragonBackgroundImage.style.display = "none";
+  dragon.style.display = "none";
+  byHealthImage.style.display = "none";
+  byWeaponImage.style.display = "none";
+  sellWeaponImage.style.display = "none";
 }
 
 function buyHealth() {
   if (gold >= 10) {
+    townSquare.style.display = "none";
+    store.style.display = "block";
+    cave.style.display = "none";
+    dragonBackgroundImage.style.display = "none";
+    dragon.style.display = "none";
+    byHealthImage.style.display = "block";
+    byWeaponImage.style.display = "none";
+    sellWeaponImage.style.display = "none";
     gold -= 10;
     health += 10;
     goldText.innerText = gold;
     healthText.innerText = health;
   } else {
+    townSquare.style.display = "none";
+    store.style.display = "block";
+    cave.style.display = "none";
+    dragonBackgroundImage.style.display = "none";
+    dragon.style.display = "none";
+    byHealthImage.style.display = "none";
+    byWeaponImage.style.display = "none";
+    sellWeaponImage.style.display = "none";
     text.innerText = "You do not have enough gold to buy health.";
   }
 }
@@ -132,6 +181,14 @@ function buyHealth() {
 function buyWeapon() {
   if (currentWeapon < weapons.length - 1) {
     if (gold >= 30) {
+      townSquare.style.display = "none";
+      store.style.display = "block";
+      cave.style.display = "none";
+      dragonBackgroundImage.style.display = "none";
+      dragon.style.display = "none";
+      byHealthImage.style.display = "none";
+      byWeaponImage.style.display = "block";
+      sellWeaponImage.style.display = "none";
       gold -= 30;
       currentWeapon++;
       goldText.innerText = gold;
@@ -140,12 +197,30 @@ function buyWeapon() {
       inventory.push(newWeapon);
       text.innerText += " In your inventory you have: " + inventory;
     } else {
+      townSquare.style.display = "none";
+      store.style.display = "block";
+      cave.style.display = "none";
+      dragonBackgroundImage.style.display = "none";
+      dragon.style.display = "none";
+      byHealthImage.style.display = "none";
+      byWeaponImage.style.display = "none";
+      sellWeaponImage.style.display = "none";
       text.innerText = "You do not have enough gold to buy a weapon.";
     }
   } else {
     text.innerText = "You already have the most powerful weapon!";
     button2.innerText = "Sell weapon for 15 gold";
     button2.onclick = sellWeapon;
+    if (button2.onclick) {
+      townSquare.style.display = "none";
+      store.style.display = "block";
+      cave.style.display = "none";
+      dragonBackgroundImage.style.display = "none";
+      dragon.style.display = "none";
+      byHealthImage.style.display = "none";
+      byWeaponImage.style.display = "none";
+      sellWeaponImage.style.display = "block";
+    }
   }
 }
 
@@ -172,6 +247,14 @@ function fightBeast() {
 }
 
 function fightDragon() {
+    townSquare.style.display = "none";
+    store.style.display = "none";
+    cave.style.display = "none";
+    dragonBackgroundImage.style.display = "block";
+    dragon.style.display = "block";
+    byHealthImage.style.display = "none";
+    byWeaponImage.style.display = "none";
+    sellWeaponImage.style.display = "none";
   fighting = 2;
   goFight();
 }
