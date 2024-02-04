@@ -2,6 +2,12 @@ body {
   background-color: #0a0a23;
 }
 
+#moniteur {
+  width: 512px;
+  height: 512px;
+  margin: auto;
+}
+
 #text {
   background-color: #0a0a23;
   color: #ffffff;
@@ -42,4 +48,37 @@ button {
   background-color: #feac32;
   background-image: linear-gradient(#fecc4c, #ffac33);
   border: 3px solid #feac32;
+}
+
+/*img display*/
+#townSquare {
+  display: block;
+}
+#store {
+  display: none;
+  position: relative;
+}
+#cave {
+  display: none;
+  position: relative;
+}
+#dragonBackgroundImage {
+  display: none;
+  position: relative;
+}
+#dragon {
+  display: none;
+  position: absolute;
+}
+#byHealthImage {
+  display: none;
+  position: absolute;
+}
+#byWeaponImage {
+  display: none;
+  position: absolute;
+}
+#sellWeaponImage {
+  display: none;
+  position: absolute;
 }
