@@ -3,46 +3,29 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./styles.css">
-    <title>RPG - Dragon Repeller</title>
+    <title>Dragon Slayer</title>
   </head>
   <body>
-    <div id="moniteur">
-      <!--locations-->
-      <img id="townSquare" src="./img/townSquareImage.png" alt="townSquare" usemap="#townSquare">
-      <!--
-      <map name="townSquare">
-        <area shape="rect" coords="34,44,270,350" alt="store" href="#button1">
-        <area shape="rect" coords="290,172,333,250" alt="cave" href="#button2">
-        <area shape="circle" coords="337,300,44" alt="dragon" href="#button3">
-      </map>
-      --><!--need to change coords-->
-      <img id="store" src="./img/storeImage.png" alt="store">
-      <img id="cave" src="./img/caveImage.png" alt="cave">
-      <img id="dragonBackgroundImage" src="./img/dragonBackgroundImage.png" alt="dragonBackgroundImage">
-      <img id="dragon" src="./img/dragonImage.png" alt="dragon">
-      <!--items-->
-      <img id="byHealthImage" src="./img/byHealthImage.png" alt="byHealthImage">
-      <img id="byWeaponImage" src="./img/byWeaponImage.png" alt="byWeaponImage">
-      <img id="sellWeaponImage" src="./img/sellWeaponImage.png" alt="sellWeaponImage">
-    </div>
-
     <div id="game">
       <div id="stats">
         <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
-        <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
         <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
+        <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
+      </div>
+      <div id="monsterStats">
+        <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
+        <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+        <span class="stat">Power: <strong><span id="monsterPower"></span></strong></span>
+        <span class="stat">Level: <strong><span id="monsterLevel"></span></strong></span>
+      </div>
+      <canvas width="1080" height="720"></canvas>
+      <div id="text">
+        Welcome to Dragon Slayer. The dragons rage for vengeance to their late brother, their fire scorching the Town! As the lone slayer, stand defiant!. You are in the King Fozi's Town. Where do you want to go? Use the buttons blow.
       </div>
       <div id="controls">
         <button id="button1">Go to store</button>
         <button id="button2">Go to cave</button>
         <button id="button3">Fight dragon</button>
-      </div>
-      <div id="monsterStats">
-        <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
-        <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
-      </div>
-      <div id="text">
-        Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.
       </div>
     </div>
     <script src="./script.js"></script>

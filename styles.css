@@ -1,84 +1,69 @@
 body {
   background-color: #0a0a23;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-size: 20px;
 }
-
-#moniteur {
-  width: 512px;
-  height: 512px;
-  margin: auto;
-}
-
-#text {
-  background-color: #0a0a23;
-  color: #ffffff;
-  padding: 10px;
-}
-
 #game {
-  max-width: 500px;
-  max-height: 400px;
+  width: 90.7vw;
+  height: 89.8vh;
   background-color: #ffffff;
   color: #ffffff;
-  margin: 30px auto 0px;
-  padding: 10px;
+  display: inline-block;
+  position: relative;
 }
-
-#controls,
 #stats {
+  width: 90vw;
   border: 1px solid #0a0a23;
-  padding: 5px;
-  color: #0a0a23;
+  padding: 15px;
+  background-color: rgba(10, 10, 35, 0.7);
+  color: #fff;
+  position: absolute;
 }
-
-#monsterStats {
-  display: none;
-  border: 1px solid #0a0a23;
-  padding: 5px;
-  color: #ffffff;
-  background-color: #c70d0d;
-}
-
 .stat {
   padding-right: 10px;
 }
-
+#text {
+  width: 45%;
+  background-color: rgba(10, 10, 35, 0.8);
+  color: #ffffff;
+  padding: 15px;
+  bottom: 8vh;
+  left: 25vw;
+  position: absolute;
+}
 button {
+  height: 30px;
   cursor: pointer;
   color: #0a0a23;
   background-color: #feac32;
   background-image: linear-gradient(#fecc4c, #ffac33);
   border: 3px solid #feac32;
 }
+#controls {
+  bottom: 1vh;
+  left: 35vw;
+  position: absolute;
+}
+#monsterStats {
+  display: none;
+  width: 52%;
+  border: 1px solid #0a0a23;
+  padding: 15px;
+  top: 12%;
+  left: 35vw;
+  color: #fff;
+  background-color: rgba(199, 13, 13, 0.5);
+  position: absolute;
+}
+canvas {
+  border: 3px solid black;
+  width: 90.7vw;
+  height: 90.2vh;
+  box-sizing: border-box;
+}
 
-/*img display*/
-#townSquare {
-  display: block;
-}
-#store {
-  display: none;
-  position: relative;
-}
-#cave {
-  display: none;
-  position: relative;
-}
-#dragonBackgroundImage {
-  display: none;
-  position: relative;
-}
-#dragon {
-  display: none;
-  position: absolute;
-}
-#byHealthImage {
-  display: none;
-  position: absolute;
-}
-#byWeaponImage {
-  display: none;
-  position: absolute;
-}
-#sellWeaponImage {
-  display: none;
-  position: absolute;
-}
